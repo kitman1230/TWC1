@@ -1,0 +1,24 @@
+{% extends 'dataVis/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+
+<div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4">
+        <h1 class="display-3">Total View.</h1>
+    </div>
+</div>
+
+{% endblock page_header %}
+
+{% block content %}
+
+<form class="form" action="{% url 'dataVis:total' %}" method="get">
+    {% csrf_token %}
+    {% bootstrap_form chartForm %}
+</form>
+
+<div class="container-fluid">
+    {{ graph|safe }}
+</div>
+{% endblock content %}

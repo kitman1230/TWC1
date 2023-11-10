@@ -1,0 +1,22 @@
+{% extends 'dataVis/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+
+<div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4">
+        <h1 class="display-3">Tracking Energy Used in DataVis. <span class="badge rounded-pill bg-info text-dark">by Wei</span></h1>
+        <p class="lead">Here is my Team Work for Data Visualization. I collected a standard csv file, within energy used in manufacturing in Finland, from 2011 to 2021. I store them to <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.djangoproject.com/">django</a> objects for permanent visit or reuse in the future. I use <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://plotly.com/">Plotly</a> to draw the graphs, combining all the data together, or use series alone. It is helpful for analysis or observing the trend.</p>
+    </div>
+    <div class="btn-group" role="group">
+        <a class="btn btn-outline-info btn-lg mt-1" href="{% url 'dataVis:single' %}">Single View</a>
+        <a class="btn btn-outline-info btn-lg mt-1" href="{% url 'dataVis:total' %}">Total View</a>
+    </div>
+</div>
+
+{% endblock page_header %}
+
+{% block content %}
+
+
+{% endblock content %}
